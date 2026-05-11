@@ -1,0 +1,89 @@
+aid: nextcloud
+name: Nextcloud
+description: >-
+  Nextcloud is an open-source, self-hosted productivity platform offering
+  file sync and share, collaboration, communication (Talk, Mail, Calendar,
+  Contacts), and office (Nextcloud Office) features as a privacy-focused
+  alternative to public cloud suites. Hosted in private datacenters or
+  on-premises, Nextcloud is widely used by enterprises, governments, and
+  individuals. The Nextcloud APIs include OCS REST APIs, WebDAV for
+  file/folder operations, CalDAV/CardDAV, and an OpenAPI-described
+  developer surface for apps and integrations.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - File Sync
+  - File Sharing
+  - Collaboration
+  - Self-Hosted
+  - Open Source
+  - Productivity
+  - WebDAV
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: nextcloud:ocs-api
+    name: Nextcloud OCS API
+    description: >-
+      Open Collaboration Services REST API for managing shares, users,
+      groups, capabilities, status, notifications, activities, and other
+      Nextcloud server resources. Uses Basic Auth, app passwords, or
+      OAuth-style login flows; results returned as JSON or XML.
+    humanURL: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+    baseURL: https://your-nextcloud.example/ocs/v2.php
+    tags:
+      - OCS
+      - Shares
+      - Users
+      - Groups
+      - Notifications
+    properties:
+      - type: Documentation
+        url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+      - type: OpenAPI Tutorial
+        url: https://docs.nextcloud.com/server/latest/developer_manual/digging_deeper/api/openapi.html
+  - aid: nextcloud:webdav-api
+    name: Nextcloud WebDAV API
+    description: >-
+      WebDAV interface for files, folders, chunked uploads, trashbin,
+      versions, comments, and search on a Nextcloud server. Provides the
+      primary file-sync protocol used by Nextcloud desktop and mobile
+      clients.
+    humanURL: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
+    baseURL: https://your-nextcloud.example/remote.php/dav
+    tags:
+      - WebDAV
+      - Files
+      - Sync
+      - Chunked Upload
+    properties:
+      - type: Documentation
+        url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
+
+common:
+  - type: Website
+    url: https://nextcloud.com
+  - type: Documentation
+    url: https://docs.nextcloud.com
+  - type: Developer Manual
+    url: https://docs.nextcloud.com/server/latest/developer_manual/
+  - type: Pricing
+    url: https://nextcloud.com/pricing/
+  - type: Sign Up
+    url: https://nextcloud.com/sign-up/
+  - type: Support
+    url: https://nextcloud.com/support/
+  - type: Blog
+    url: https://nextcloud.com/blog/
+  - type: GitHub Organization
+    url: https://github.com/nextcloud
+  - type: GitHub Server
+    url: https://github.com/nextcloud/server
+  - type: App Store
+    url: https://apps.nextcloud.com
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
