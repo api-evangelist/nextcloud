@@ -72,13 +72,13 @@ common:
     url: https://docs.nextcloud.com/server/latest/developer_manual/
   - type: Pricing
     url: https://nextcloud.com/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://nextcloud.com/sign-up/
   - type: Support
     url: https://nextcloud.com/support/
   - type: Blog
     url: https://nextcloud.com/blog/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/nextcloud
   - type: GitHub Server
     url: https://github.com/nextcloud/server
