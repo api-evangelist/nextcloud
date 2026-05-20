@@ -64,6 +64,8 @@ apis:
         url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/nextcloud-gmbh
   - type: Website
     url: https://nextcloud.com
   - type: Documentation
