@@ -1,0 +1,227 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nextcloud OCS API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all user IDs (admin only)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-nextcloud.example/ocs/v1.php/cloud/users",
+            "headers": [
+              {
+                "name": "OCS-APIRequest",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all user IDs (admin only)"
+        },
+        {
+          "info": {
+            "name": "Retrieve user metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-nextcloud.example/ocs/v1.php/cloud/users/:userId",
+            "headers": [
+              {
+                "name": "OCS-APIRequest",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve user metadata"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Capabilities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Obtain server and app capabilities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-nextcloud.example/ocs/v1.php/cloud/capabilities",
+            "headers": [
+              {
+                "name": "OCS-APIRequest",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Obtain server and app capabilities"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Autocomplete",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Auto-complete user, group, email, or federated search",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-nextcloud.example/ocs/v2.php/core/autocomplete/get",
+            "headers": [
+              {
+                "name": "OCS-APIRequest",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "itemType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "shareTypes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Auto-complete user, group, email, or federated search"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "DAV",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate a direct file download link",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-nextcloud.example/ocs/v2.php/apps/dav/api/v1/direct",
+            "headers": [
+              {
+                "name": "OCS-APIRequest",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "fileId",
+                  "value": ""
+                },
+                {
+                  "name": "expirationTime",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Generate a direct file download link"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
