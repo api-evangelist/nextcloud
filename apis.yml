@@ -10,7 +10,7 @@ description: >-
   file/folder operations, CalDAV/CardDAV, and an OpenAPI-described
   developer surface for apps and integrations.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - File Sync
   - File Sharing
