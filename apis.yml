@@ -74,7 +74,7 @@ common:
     url: https://docs.nextcloud.com/server/latest/developer_manual/
   - type: Pricing
     url: https://nextcloud.com/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://nextcloud.com/sign-up/
   - type: Support
     url: https://nextcloud.com/support/
