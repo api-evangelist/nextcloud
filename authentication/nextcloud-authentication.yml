@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/nextcloud-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BasicAuth
+  type: http
+  scheme: basic
+  description: Username + password or username + app token
+  sources:
+  - openapi/nextcloud-openapi.yml
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  description: OIDC bearer token issued by an external identity provider
+  sources:
+  - openapi/nextcloud-openapi.yml

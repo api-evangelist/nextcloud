@@ -64,6 +64,14 @@ apis:
         url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
 
 common:
+  - type: TrustCenter
+    url: security/nextcloud-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/nextcloud-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/nextcloud-domain-security.yml
+  - type: Authentication
+    url: authentication/nextcloud-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/nextcloud-gmbh
   - type: Website

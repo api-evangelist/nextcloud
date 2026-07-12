@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://nextcloud.com/compliance/
+url: https://nextcloud.com/compliance/
+certifications:
+- ISO 27001
+- PCI DSS
+- HIPAA
+- GDPR
+evidence:
+- source: https://nextcloud.com/compliance/
+  keywords:
+  - iso 27001
+  - pci dss
+  - hipaa
+  - gdpr

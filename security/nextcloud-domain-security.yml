@@ -1,0 +1,30 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: nextcloud.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 12 01:03:43 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+- host: docs.nextcloud.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 25 05:49:19 2026 GMT
+  hsts: false
+- host: your-nextcloud.example
+  https: false
+domains:
+- domain: nextcloud.com
+  dnssec: false
+  caa:
+  - 0 issue "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: your-nextcloud.example
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
