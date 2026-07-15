@@ -64,6 +64,8 @@ apis:
         url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/nextcloud-agentic-access.yml
   - type: TrustCenter
     url: security/nextcloud-trust-center.yml
   - type: VulnerabilityDisclosure
