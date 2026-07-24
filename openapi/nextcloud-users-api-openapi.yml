@@ -1,0 +1,134 @@
+openapi: 3.1.0
+info:
+  title: Nextcloud OCS Autocomplete Users API
+  version: '2'
+  description: 'Open Collaboration Services (OCS) REST API for a Nextcloud server. Exposes user, group, capability, share, autocomplete, and DAV-direct-link endpoints. All requests must include the `OCS-APIRequest: true` header. Authentication is Basic Auth (username with password or app token), an OIDC Bearer token, or a valid session cookie. Responses are returned as XML by default and as JSON when `Accept: application/json` is sent (or `format=json` is appended).'
+  contact:
+    name: Nextcloud Developer Documentation
+    url: https://docs.nextcloud.com/server/latest/developer_manual/
+servers:
+- url: https://your-nextcloud.example
+  description: A Nextcloud server (replace host)
+  variables:
+    host:
+      default: your-nextcloud.example
+security:
+- BasicAuth: []
+- BearerAuth: []
+tags:
+- name: Users
+paths:
+  /ocs/v1.php/cloud/users:
+    get:
+      tags:
+      - Users
+      summary: List all user IDs (admin only)
+      parameters:
+      - $ref: '#/components/parameters/OcsApiRequest'
+      - name: search
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: offset
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+      responses:
+        '200':
+          description: OCS response containing user IDs
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OcsEnvelope'
+  /ocs/v1.php/cloud/users/{userId}:
+    get:
+      tags:
+      - Users
+      summary: Retrieve user metadata
+      parameters:
+      - $ref: '#/components/parameters/OcsApiRequest'
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+      responses:
+        '200':
+          description: OCS response containing user metadata
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OcsEnvelope'
+components:
+  schemas:
+    OcsEnvelope:
+      type: object
+      description: Standard OCS response envelope
+      properties:
+        ocs:
+          type: object
+          properties:
+            meta:
+              type: object
+              properties:
+                status:
+                  type: string
+                  examples:
+                  - ok
+                statuscode:
+                  type: integer
+                message:
+                  type: string
+            data:
+              description: Endpoint-specific payload
+              oneOf:
+              - type: object
+                additionalProperties: true
+              - type: array
+                items: {}
+              - type: string
+  parameters:
+    OcsApiRequest:
+      name: OCS-APIRequest
+      in: header
+      required: true
+      schema:
+        type: string
+        enum:
+        - 'true'
+      description: Required header for all OCS API requests
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: Username + password or username + app token
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: OIDC bearer token issued by an external identity provider
+externalDocs:
+  description: Nextcloud OCS API overview
+  url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
