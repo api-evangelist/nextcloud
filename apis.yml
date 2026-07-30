@@ -10,7 +10,19 @@ description: >-
   file/folder operations, CalDAV/CardDAV, and an OpenAPI-described
   developer surface for apps and integrations.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nextcloud.png
 tags:
   - File Sync
   - File Sharing
@@ -25,44 +37,87 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: nextcloud:ocs-api
-    name: Nextcloud OCS API
-    description: >-
-      Open Collaboration Services REST API for managing shares, users,
-      groups, capabilities, status, notifications, activities, and other
-      Nextcloud server resources. Uses Basic Auth, app passwords, or
-      OAuth-style login flows; results returned as JSON or XML.
-    humanURL: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
-    baseURL: https://your-nextcloud.example/ocs/v2.php
-    tags:
-      - OCS
-      - Shares
-      - Users
-      - Groups
-      - Notifications
-    properties:
-      - type: Documentation
-        url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
-      - type: OpenAPI Tutorial
-        url: https://docs.nextcloud.com/server/latest/developer_manual/digging_deeper/api/openapi.html
-  - aid: nextcloud:webdav-api
-    name: Nextcloud WebDAV API
-    description: >-
-      WebDAV interface for files, folders, chunked uploads, trashbin,
-      versions, comments, and search on a Nextcloud server. Provides the
-      primary file-sync protocol used by Nextcloud desktop and mobile
-      clients.
-    humanURL: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
-    baseURL: https://your-nextcloud.example/remote.php/dav
-    tags:
-      - WebDAV
-      - Files
-      - Sync
-      - Chunked Upload
-    properties:
-      - type: Documentation
-        url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
-
+- aid: nextcloud:ocs-api
+  name: Nextcloud OCS API
+  description: >-
+    Open Collaboration Services REST API for managing shares, users, groups, capabilities, status, notifications,
+    activities, and other Nextcloud server resources. Uses Basic Auth, app passwords, or OAuth-style login
+    flows; results returned as JSON or XML.
+  humanURL: >-
+    https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+  baseURL: https://your-nextcloud.example/ocs/v2.php
+  tags:
+  - OCS
+  - Shares
+  - Users
+  - Groups
+  - Notifications
+  properties:
+  - type: Documentation
+    url: >-
+      https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+  - type: OpenAPI Tutorial
+    url: >-
+      https://docs.nextcloud.com/server/latest/developer_manual/digging_deeper/api/openapi.html
+- aid: nextcloud:webdav-api
+  name: Nextcloud WebDAV API
+  description: >-
+    WebDAV interface for files, folders, chunked uploads, trashbin, versions, comments, and search on
+    a Nextcloud server. Provides the primary file-sync protocol used by Nextcloud desktop and mobile clients.
+  humanURL: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
+  baseURL: https://your-nextcloud.example/remote.php/dav
+  tags:
+  - WebDAV
+  - Files
+  - Sync
+  - Chunked Upload
+  properties:
+  - type: Documentation
+    url: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
+- aid: nextcloud:nextcloud-autocomplete-api
+  name: Nextcloud Autocomplete API
+  description: The Autocomplete API from Nextcloud — 1 operation(s) for autocomplete.
+  humanURL: >-
+    https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+  baseURL: https://your-nextcloud.example/ocs/v2.php
+  tags:
+  - Autocomplete
+  properties:
+  - type: OpenAPI
+    url: openapi/nextcloud-autocomplete-api-openapi.yml
+- aid: nextcloud:nextcloud-capabilities-api
+  name: Nextcloud Capabilities API
+  description: The Capabilities API from Nextcloud — 1 operation(s) for capabilities.
+  humanURL: >-
+    https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+  baseURL: https://your-nextcloud.example/ocs/v2.php
+  tags:
+  - Capabilities
+  properties:
+  - type: OpenAPI
+    url: openapi/nextcloud-capabilities-api-openapi.yml
+- aid: nextcloud:nextcloud-dav-api
+  name: Nextcloud DAV API
+  description: The DAV API from Nextcloud — 1 operation(s) for dav.
+  humanURL: >-
+    https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+  baseURL: https://your-nextcloud.example/ocs/v2.php
+  tags:
+  - DAV
+  properties:
+  - type: OpenAPI
+    url: openapi/nextcloud-dav-api-openapi.yml
+- aid: nextcloud:nextcloud-users-api
+  name: Nextcloud Users API
+  description: The Users API from Nextcloud — 2 operation(s) for users.
+  humanURL: >-
+    https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
+  baseURL: https://your-nextcloud.example/ocs/v2.php
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/nextcloud-users-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/nextcloud-agentic-access.yml
