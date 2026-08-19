@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nextcloud OCS Autocomplete DAV API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DAV",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate a direct file download link",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-nextcloud.example/ocs/v2.php/apps/dav/api/v1/direct",
+            "headers": [
+              {
+                "name": "OCS-APIRequest",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "fileId",
+                  "value": ""
+                },
+                {
+                  "name": "expirationTime",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Generate a direct file download link"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

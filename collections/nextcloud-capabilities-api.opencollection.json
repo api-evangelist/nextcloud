@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nextcloud OCS Autocomplete Capabilities API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Capabilities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Obtain server and app capabilities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-nextcloud.example/ocs/v1.php/cloud/capabilities",
+            "headers": [
+              {
+                "name": "OCS-APIRequest",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Obtain server and app capabilities"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

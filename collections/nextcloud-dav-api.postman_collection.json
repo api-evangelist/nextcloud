@@ -1,0 +1,227 @@
+{
+  "item": [
+    {
+      "id": "c2b761e9-7e31-4dbe-9ade-dd45a30cef4c",
+      "name": "DAV",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cb1f934b-f447-40ab-a673-b27a44c14523",
+          "name": "Generate a direct file download link",
+          "request": {
+            "name": "Generate a direct file download link",
+            "description": {},
+            "url": {
+              "path": [
+                "ocs",
+                "v2.php",
+                "apps",
+                "dav",
+                "api",
+                "v1",
+                "direct"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Required header for all OCS API requests",
+                "key": "OCS-APIRequest",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "fileId",
+                  "value": "<integer>",
+                  "description": "(Required) Numeric file id of the file to expose"
+                },
+                {
+                  "disabled": false,
+                  "key": "expirationTime",
+                  "value": "<integer>",
+                  "description": "Optional expiration time in seconds"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "13957df9-a556-459c-9fcc-4ee288226086",
+              "name": "OCS response containing the generated direct URL",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ocs",
+                    "v2.php",
+                    "apps",
+                    "dav",
+                    "api",
+                    "v1",
+                    "direct"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Required header for all OCS API requests",
+                    "key": "OCS-APIRequest",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) Numeric file id of the file to expose",
+                        "type": "text/plain"
+                      },
+                      "key": "fileId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Optional expiration time in seconds",
+                        "type": "text/plain"
+                      },
+                      "key": "expirationTime",
+                      "value": "<integer>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ocs\": {\n    \"meta\": {\n      \"status\": \"ok\",\n      \"statuscode\": 5335,\n      \"message\": \"string\"\n    },\n    \"data\": {\n      \"key_0\": \"string\",\n      \"key_1\": false,\n      \"key_2\": \"string\",\n      \"key_3\": 4251\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "your-nextcloud.example",
+      "key": "host"
+    },
+    {
+      "type": "string",
+      "value": "https://your-nextcloud.example",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1059f31e-74c4-4891-91da-5189ee167dad",
+    "name": "Nextcloud OCS Autocomplete DAV API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open Collaboration Services (OCS) REST API for a Nextcloud server. Exposes user, group, capability, share, autocomplete, and DAV-direct-link endpoints. All requests must include the `OCS-APIRequest: true` header. Authentication is Basic Auth (username with password or app token), an OIDC Bearer token, or a valid session cookie. Responses are returned as XML by default and as JSON when `Accept: application/json` is sent (or `format=json` is appended).\n\nContact Support:\n Name: Nextcloud Developer Documentation",
+      "type": "text/plain"
+    }
+  }
+}

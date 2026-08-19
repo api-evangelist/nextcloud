@@ -1,0 +1,235 @@
+{
+  "item": [
+    {
+      "id": "02f16043-f5c1-42a7-be73-8c00beada612",
+      "name": "Autocomplete",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c6943757-4064-422d-9d89-9e1e26594148",
+          "name": "Auto-complete user, group, email, or federated search",
+          "request": {
+            "name": "Auto-complete user, group, email, or federated search",
+            "description": {},
+            "url": {
+              "path": [
+                "ocs",
+                "v2.php",
+                "core",
+                "autocomplete",
+                "get"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "itemType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "itemId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "shareTypes",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "shareTypes",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Required header for all OCS API requests",
+                "key": "OCS-APIRequest",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "52376e67-87a2-4189-a4e6-133a0f6cf372",
+              "name": "OCS response containing autocomplete matches",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ocs",
+                    "v2.php",
+                    "core",
+                    "autocomplete",
+                    "get"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "itemType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "itemId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shareTypes",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "shareTypes",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Required header for all OCS API requests",
+                    "key": "OCS-APIRequest",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"ocs\": {\n    \"meta\": {\n      \"status\": \"ok\",\n      \"statuscode\": 6554,\n      \"message\": \"string\"\n    },\n    \"data\": {\n      \"key_0\": 3342,\n      \"key_1\": true,\n      \"key_2\": 8446.935015765235\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "your-nextcloud.example",
+      "key": "host"
+    },
+    {
+      "type": "string",
+      "value": "https://your-nextcloud.example",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "18bdf0c2-7cba-406c-938a-b914d675f2f0",
+    "name": "Nextcloud OCS Autocomplete API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open Collaboration Services (OCS) REST API for a Nextcloud server. Exposes user, group, capability, share, autocomplete, and DAV-direct-link endpoints. All requests must include the `OCS-APIRequest: true` header. Authentication is Basic Auth (username with password or app token), an OIDC Bearer token, or a valid session cookie. Responses are returned as XML by default and as JSON when `Accept: application/json` is sent (or `format=json` is appended).\n\nContact Support:\n Name: Nextcloud Developer Documentation",
+      "type": "text/plain"
+    }
+  }
+}
