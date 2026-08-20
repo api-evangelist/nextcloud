@@ -28,6 +28,14 @@ tags:
   - File Sharing
   - Collaboration
   - Self-Hosted
+  - Open-Source
+  - Productivity
+  - WebDAV
+tags_raw:
+  - File Sync
+  - File Sharing
+  - Collaboration
+  - Self-Hosted
   - Open Source
   - Productivity
   - WebDAV
@@ -49,6 +57,12 @@ apis:
   tags:
   - OCS
   - Shares
+  - User
+  - Group
+  - Notification
+  tags_raw:
+  - OCS
+  - Shares
   - Users
   - Groups
   - Notifications
@@ -67,6 +81,11 @@ apis:
   humanURL: https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html
   baseURL: https://your-nextcloud.example/remote.php/dav
   tags:
+  - WebDAV
+  - File
+  - Sync
+  - Chunked Upload
+  tags_raw:
   - WebDAV
   - Files
   - Sync
@@ -114,6 +133,8 @@ apis:
     https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html
   baseURL: https://your-nextcloud.example/ocs/v2.php
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
