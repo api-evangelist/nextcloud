@@ -69,7 +69,7 @@ apis:
   baseURL: https://your-nextcloud.example/ocs/v2.php
   tags:
   - OCS
-  - Shares
+  - Share
   - User
   - Group
   - Notification
