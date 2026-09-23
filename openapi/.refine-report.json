@@ -1,10 +1,7 @@
 {
   "provider": "nextcloud",
   "sources": [
-    "nextcloud-autocomplete-api-openapi.yml",
-    "nextcloud-capabilities-api-openapi.yml",
-    "nextcloud-dav-api-openapi.yml",
-    "nextcloud-users-api-openapi.yml"
+    "_original/nextcloud-openapi.yml"
   ],
   "outputs": [
     "nextcloud-autocomplete-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "nextcloud-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "nextcloud-autocomplete-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nextcloud-capabilities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nextcloud-dav-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nextcloud-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
