@@ -41,7 +41,7 @@ tags:
   - File Sharing
   - Collaboration
   - Self-Hosted
-  - Open-Source
+  - Open Source
   - Productivity
   - WebDAV
 tags_raw:
@@ -52,6 +52,7 @@ tags_raw:
   - Open Source
   - Productivity
   - WebDAV
+  - Open-Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/apis.yml
 created: '2026-05-11'
