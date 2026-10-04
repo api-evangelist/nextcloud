@@ -87,16 +87,6 @@ paths:
       operationId: getOcsV1PhpCloudUsersByUserId
       x-operation-id-source: derived
 components:
-  parameters:
-    OcsApiRequest:
-      name: OCS-APIRequest
-      in: header
-      required: true
-      schema:
-        type: string
-        enum:
-        - 'true'
-      description: Required header for all OCS API requests
   schemas:
     OcsEnvelope:
       type: object
@@ -124,6 +114,16 @@ components:
               - type: array
                 items: {}
               - type: string
+  parameters:
+    OcsApiRequest:
+      name: OCS-APIRequest
+      in: header
+      required: true
+      schema:
+        type: string
+        enum:
+        - 'true'
+      description: Required header for all OCS API requests
   securitySchemes:
     BasicAuth:
       type: http
