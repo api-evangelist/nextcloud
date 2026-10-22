@@ -134,6 +134,50 @@ edges:
   - Flathub verified
   detected_by: sweep-flathub-linux-app-publishers.py
   first_seen: '2026-10-22'
+- partner_name: OpenSSF Best Practices Badge
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.bestpractices.dev/en/projects/209
+  category: OpenSSF Best Practices badge (open-source project security conformance)
+  contract_reference:
+    register: OpenSSF Best Practices badge projects (bestpractices.dev/en/projects.json, paged)
+    standard: OpenSSF Best Practices Badge criteria (formerly CII Best Practices; bestpractices.dev)
+    spec_file: null
+    role: badge-holder
+    registered_name: Nextcloud server
+    matched_by: github-org
+    matched_on: nextcloud
+    certified_products:
+    - product: open-source project
+      product_type: open-source project
+      standard: OpenSSF Best Practices Badge criteria (formerly CII Best Practices; bestpractices.dev)
+      lapsed: false
+      partner_tier: passing
+      projects:
+      - name: App Store for Nextcloud
+        id: 846
+        url: https://www.bestpractices.dev/en/projects/846
+        badge_level: passing
+      - name: Nextcloud Android app
+        id: 8370
+        url: https://www.bestpractices.dev/en/projects/8370
+        badge_level: passing
+      - name: Nextcloud server
+        id: 209
+        url: https://www.bestpractices.dev/en/projects/209
+        badge_level: passing
+    signal_note: 'certified_products = ONE entry (product type: open-source project) with the highest CURRENT badge
+      level in partner_tier; a provider whose projects only lost the badge is lapsed: true; project names are context,
+      never counted; in_progress entries are not conformance'
+    detected_by: sweep-openssf-best-practices-badges.py
+    detected: '2026-10-22'
+    identity_source: apis.yml GitHubOrganization pointer (provider's own declaration)
+  detected_by: sweep-openssf-best-practices-badges.py
+  first_seen: '2026-10-22'
 method: searched
 checked:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
@@ -150,5 +194,6 @@ checked:
 - https://raw.githubusercontent.com/obsidianmd/obsidian-releases/793b52114f54b055b760ef47761ec5c93d689804/community-plugins.json
 - https://flathub.org/api/v2/appstream
 - https://flathub.org/api/v2/appstream/<app-id>
+- https://www.bestpractices.dev/en/projects.json
 source:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
