@@ -178,6 +178,25 @@ edges:
     detected: '2026-10-22'
   detected_by: sweep-openssf-best-practices-badges.py
   first_seen: '2026-10-22'
+- partner_name: Ansible (ansible-galaxy)
+  partner: ansible
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: ansible-galaxy
+  evidence: https://galaxy.ansible.com/ui/repo/published/nextcloud/admin/
+  mirror_of: ansible/integrations/ansible-integration-edges.yml
+  apps:
+  - nextcloud.admin
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: configuration-management content listing (Ansible collection)
+  badges:
+  - Verified publisher (GitHub domain-verified organization)
 method: searched
 checked:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
@@ -196,5 +215,6 @@ checked:
 - https://flathub.org/api/v2/appstream/<app-id>
 - https://www.bestpractices.dev/en/projects.json
 - https://www.bestpractices.dev/en/projects.json?page=N
+- ansible/integrations/ansible-integration-edges.yml
 source:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
