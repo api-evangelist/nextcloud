@@ -134,7 +134,7 @@ edges:
   - Flathub verified
   detected_by: sweep-flathub-linux-app-publishers.py
   first_seen: '2026-10-22'
-- partner_name: OpenSSF Best Practices Badge
+- partner_name: OpenSSF Best Practices Badge (bestpractices.dev)
   partner: null
   partner_match: register
   type: register
@@ -142,40 +142,40 @@ edges:
   relationship: standard-participant
   direction: partner-built
   evidence: https://www.bestpractices.dev/en/projects/209
-  category: OpenSSF Best Practices badge (open-source project security conformance)
+  category: OpenSSF Best Practices badge (open-source project security practices)
   contract_reference:
-    register: OpenSSF Best Practices badge projects (bestpractices.dev/en/projects.json, paged)
-    standard: OpenSSF Best Practices Badge criteria (formerly CII Best Practices; bestpractices.dev)
+    register: OpenSSF Best Practices Badge projects (www.bestpractices.dev/en/projects.json)
+    standard: OpenSSF Best Practices Badge criteria (passing / silver / gold)
     spec_file: null
-    role: badge-holder
+    role: badged-project-owner
     registered_name: Nextcloud server
-    matched_by: github-org
-    matched_on: nextcloud
+    matched_domain: nextcloud.com
+    matched_by: domain
     certified_products:
     - product: open-source project
       product_type: open-source project
-      standard: OpenSSF Best Practices Badge criteria (formerly CII Best Practices; bestpractices.dev)
-      lapsed: false
+      standard: OpenSSF Best Practices Badge criteria (passing / silver / gold)
       partner_tier: passing
-      projects:
-      - name: App Store for Nextcloud
-        id: 846
-        url: https://www.bestpractices.dev/en/projects/846
-        badge_level: passing
-      - name: Nextcloud Android app
-        id: 8370
-        url: https://www.bestpractices.dev/en/projects/8370
-        badge_level: passing
-      - name: Nextcloud server
-        id: 209
-        url: https://www.bestpractices.dev/en/projects/209
-        badge_level: passing
-    signal_note: 'certified_products = ONE entry (product type: open-source project) with the highest CURRENT badge
-      level in partner_tier; a provider whose projects only lost the badge is lapsed: true; project names are context,
-      never counted; in_progress entries are not conformance'
+      lapsed: false
+      badge_date: '2016-11-01'
+    badged_projects:
+    - name: Nextcloud server
+      id: 209
+      badge: passing
+      url: https://www.bestpractices.dev/en/projects/209
+    - name: App Store for Nextcloud
+      id: 846
+      badge: passing
+      url: https://www.bestpractices.dev/en/projects/846
+    - name: Nextcloud Android app
+      id: 8370
+      badge: passing
+      url: https://www.bestpractices.dev/en/projects/8370
+    signal_note: 'certified_products = ONE entry per provider (product type open-source project): highest current
+      OpenSSF Best Practices badge level in partner_tier, earliest date at that level; lapsed: true when every linked
+      project lost its badge. badged_projects is context, never counted'
     detected_by: sweep-openssf-best-practices-badges.py
     detected: '2026-10-22'
-    identity_source: apis.yml GitHubOrganization pointer (provider's own declaration)
   detected_by: sweep-openssf-best-practices-badges.py
   first_seen: '2026-10-22'
 method: searched
@@ -195,5 +195,6 @@ checked:
 - https://flathub.org/api/v2/appstream
 - https://flathub.org/api/v2/appstream/<app-id>
 - https://www.bestpractices.dev/en/projects.json
+- https://www.bestpractices.dev/en/projects.json?page=N
 source:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
