@@ -1,4 +1,4 @@
-# Nextcloud (nextcloud)
+# Nextcloud
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,86 +66,110 @@
 
 Nextcloud is an open-source, self-hosted productivity platform offering file sync and share, collaboration, communication (Talk, Mail, Calendar, Contacts), and office (Nextcloud Office) features as a privacy-focused alternative to public cloud suites. Hosted in private datacenters or on-premises, Nextcloud is widely used by enterprises, governments, and individuals. The Nextcloud APIs include OCS REST APIs, WebDAV for file/folder operations, CalDAV/CardDAV, and an OpenAPI-described developer surface for apps and integrations.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/apis.yml)
+**Areas:** File Sync · File Sharing · Collaboration · Self-Hosted · Open Source · Productivity · WebDAV
 
-## Scope
+## Nextcloud on APIs.io
 
-- **Type:** Index
+Everything profiled for Nextcloud is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nextcloud/](https://apis.io/providers/nextcloud/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- File Sync
-- File Sharing
-- Collaboration
-- Self-Hosted
-- Open Source
-- Productivity
-- WebDAV
+- [Nextcloud OCS API](https://apis.io/apis/nextcloud/ocs-api/) — Open Collaboration Services REST API for managing shares, users, groups, capabilities, status, notifications, activities, and other Nextcloud server…
+- [Nextcloud WebDAV API](https://apis.io/apis/nextcloud/webdav-api/) — WebDAV interface for files, folders, chunked uploads, trashbin, versions, comments, and search on a Nextcloud server. Provides the primary file-sync…
+- [Nextcloud Autocomplete API](https://apis.io/apis/nextcloud/nextcloud-autocomplete-api/) — The Autocomplete API from Nextcloud — 1 operation(s) for autocomplete.
+- [Nextcloud Capabilities API](https://apis.io/apis/nextcloud/nextcloud-capabilities-api/) — The Capabilities API from Nextcloud — 1 operation(s) for capabilities.
+- [Nextcloud DAV API](https://apis.io/apis/nextcloud/nextcloud-dav-api/) — The DAV API from Nextcloud — 1 operation(s) for dav.
+- [Nextcloud Users API](https://apis.io/apis/nextcloud/nextcloud-users-api/) — The Users API from Nextcloud — 2 operation(s) for users.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Nextcloud OCS API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Open Collaboration Services REST API for managing shares, users, groups, capabilities, status, notifications, activities, and other Nextcloud server resources. Uses Basic Auth, app passwords, or OAuth-style login flows; results returned as JSON or XML.
+- [Nextcloud Agentic Access](https://apis.io/agentic-access/nextcloud/nextcloud-agentic-access/)
 
-- **Human URL:** [https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html)
-- **Base URL:** `https://your-nextcloud.example/ocs/v2.php`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- OCS
-- Shares
-- Users
-- Groups
-- Notifications
+- [Nextcloud OCS API](https://apis.io/collections/nextcloud/open-nextcloud/)
+- [Nextcloud OCS Autocomplete API](https://apis.io/collections/nextcloud/open-nextcloud-autocomplete-api/)
+- [Nextcloud OCS Autocomplete Capabilities API](https://apis.io/collections/nextcloud/open-nextcloud-capabilities-api/)
+- [Nextcloud OCS Autocomplete DAV API](https://apis.io/collections/nextcloud/open-nextcloud-dav-api/)
+- [Nextcloud OCS Autocomplete Users API](https://apis.io/collections/nextcloud/open-nextcloud-users-api/)
 
-#### Properties
+#### Security (4)
 
-- [Documentation](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/OCS/ocs-api-overview.html)
-- [Open A P I  Tutorial](https://docs.nextcloud.com/server/latest/developer_manual/digging_deeper/api/openapi.html)
-- [Postman Collection](collections/nextcloud.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/nextcloud.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Nextcloud WebDAV API
+- [Nextcloud Authentication](https://apis.io/security/nextcloud/nextcloud-authentication/)
+- [Nextcloud Domain Security](https://apis.io/security/nextcloud/nextcloud-domain-security/)
+- [Nextcloud Trust Center](https://apis.io/security/nextcloud/nextcloud-trust-center/)
+- [Nextcloud Vulnerability Disclosure](https://apis.io/security/nextcloud/nextcloud-vulnerability-disclosure/)
 
-WebDAV interface for files, folders, chunked uploads, trashbin, versions, comments, and search on a Nextcloud server. Provides the primary file-sync protocol used by Nextcloud desktop and mobile clients.
+## Where to find this API
 
-- **Human URL:** [https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html)
-- **Base URL:** `https://your-nextcloud.example/remote.php/dav`
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- WebDAV
-- Files
-- Sync
-- Chunked Upload
-
-#### Properties
-
-- [Documentation](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/index.html)
-- [Postman Collection](collections/nextcloud.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/nextcloud.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/nextcloud-gmbh)
 - [Website](https://nextcloud.com)
 - [Documentation](https://docs.nextcloud.com)
-- [Developer  Manual](https://docs.nextcloud.com/server/latest/developer_manual/)
 - [Pricing](https://nextcloud.com/pricing/)
-- [Sign Up](https://nextcloud.com/sign-up/)
 - [Support](https://nextcloud.com/support/)
 - [Blog](https://nextcloud.com/blog/)
-- [GitHub Organization](https://github.com/nextcloud)
-- [Git Hub  Server](https://github.com/nextcloud/server)
-- [App  Store](https://apps.nextcloud.com)
+- [GitHub](https://github.com/nextcloud)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 42.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 31.6 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nextcloud/](https://apis.io/providers/nextcloud/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Nextcloud: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nextcloud/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
